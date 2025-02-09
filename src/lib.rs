@@ -1,4 +1,6 @@
-use std::env;
+pub mod middleware;
+
+use std::{env};
 
 use actix_web::{get, web, HttpResponse, Responder};
 
@@ -24,5 +26,6 @@ pub fn init(config: &mut web::ServiceConfig) {
         web::scope("")
             .service(index)
             .service(healthcheck)
+            .service(github_notifications),
     );
 }
