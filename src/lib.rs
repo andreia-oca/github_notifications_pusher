@@ -1,6 +1,6 @@
 pub mod middleware;
 
-use std::{env};
+use std::env;
 
 use actix_web::{get, web, HttpResponse, Responder};
 

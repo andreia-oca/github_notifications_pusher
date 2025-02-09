@@ -1,6 +1,6 @@
 use actix_web::{dev::{Service, ServiceRequest, ServiceResponse, Transform}, Error};
 use futures_util::future::{ok, Ready};
-use std::{future::{Future}, pin::Pin, task::{Context, Poll}, time::Instant};
+use std::{future::Future, pin::Pin, task::{Context, Poll}, time::Instant};
 use log::info;
 use std::rc::Rc;
 
