@@ -1,8 +1,11 @@
 use actix_web::{App, HttpServer};
+use dotenvy::dotenv;
 use github_notification_pusher::init;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    dotenv().ok();
+
     HttpServer::new(|| {
         App::new()
             .configure(init)
